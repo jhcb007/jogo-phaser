@@ -151,39 +151,34 @@
             crate = platforms.create(1900, 285, 'crate');
             crate.scale.setTo(0.5, 0.5);
             crate.body.immovable = true;
-
-            crate = platforms.create(1900, 85, 'crate');
+            crate = platforms.create(1950, 285, 'crate');
             crate.scale.setTo(0.5, 0.5);
             crate.body.immovable = true;
+
+            crate = platforms.create(1900, 70, 'crate');
+            crate.scale.setTo(0.5, 0.5);
+            crate.body.immovable = true;
+            crate = platforms.create(1950, 70, 'crate');
+            crate.scale.setTo(0.5, 0.5);
+            crate.body.immovable = true;
+            crate = platforms.create(2000, 70, 'crate');
+            crate.scale.setTo(0.5, 0.5);
+            crate.body.immovable = true;
+
             //Fim Coluna 2
 
             //Início Coluna 3
-
-            for (i = 0; i < 5; i++) {
-                ledge = platforms.create(2150 + i * 128, 400, 'plat5');
-                ledge.body.immovable = true;
-            }
-            for (i = 0; i < 5; i++) {
-                ledge = platforms.create(2150 + i * 128, 300, 'plat5');
-                ledge.body.immovable = true;
-            }
-
-            for (i = 0; i < 5; i++) {
-                ledge = platforms.create(2150 + i * 128, 200, 'plat5');
-                ledge.body.immovable = true;
-            }
-
-            for (i = 0; i < 5; i++) {
-                ledge = platforms.create(2150 + i * 128, 100, 'plat5');
-                ledge.body.immovable = true;
-            }
-
-
-            crate = platforms.create(2100, 385, 'crate');
+            crate = platforms.create(2150, 385, 'crate');
             crate.scale.setTo(0.5, 0.5);
             crate.body.immovable = true;
 
             crate = platforms.create(2100, 185, 'crate');
+            crate.scale.setTo(0.5, 0.5);
+            crate.body.immovable = true;
+            crate = platforms.create(2150, 185, 'crate');
+            crate.scale.setTo(0.5, 0.5);
+            crate.body.immovable = true;
+            crate = platforms.create(2200, 185, 'crate');
             crate.scale.setTo(0.5, 0.5);
             crate.body.immovable = true;
 
@@ -192,17 +187,17 @@
 
 
             //Início checkpoint
-            checkpoint = setas.create(1500, 330, 'checkpoint');
+            checkpoint = setas.create(1300, 460, 'checkpoint');
             checkpoint.body.immovable = true;
             //Fim checkpoint
 
             //Início checkpoint
-            checkpoint = setas.create(2100, 330, 'checkpoint');
+            checkpoint = setas.create(1920, 0, 'checkpoint');
             checkpoint.body.immovable = true;
             //Fim checkpoint
 
             //Início checkpoint
-            checkpoint = setas.create(3100, 460, 'checkpoint');
+            checkpoint = setas.create(2400, 460, 'checkpoint');
             checkpoint.body.immovable = true;
             //Fim checkpoint
 
@@ -233,7 +228,7 @@
             //Fim Caixa 1
 
             //Início Caixa 2
-            icebox = platforms.create(1990, 500, 'icebox');
+            icebox = platforms.create(1975, 490, 'icebox');
             icebox.scale.setTo(0.5, 0.5);
             icebox.body.immovable = true;
             //Fim Caixa 2
@@ -482,11 +477,9 @@
                 player.body.velocity.y = -350;
             }
 
-
-            /*
             if (player.x > 100) {
                 //resetSprite(player)
-            }*/
+            }
 
             if (player.y > 954) {
                 window.location.href = 'index.html';
@@ -494,17 +487,17 @@
                 get_palavras();
             }
 
-            if (!checkpoints[0] && player.x > 1074 && player.x < 1122) {
-                //openDesafioFase2();
+            if (!checkpoints[0] && player.x > 1303 && player.x < 1356) {
+                openDesafioFase2();
                 checkpoints[0] = true;
-            } else if (!checkpoints[1] && player.x > 2075 && player.x < 2125) {
-                //openDesafioFase2();
+            } else if (!checkpoints[1] && player.x > 1906 && player.x < 1973 && player.y === 24.60) {
+                openDesafioFase2();
                 checkpoints[1] = true;
-            } else if (!checkpoints[2] && player.x > 3096 && player.x < 3149) {
-                //openDesafioFase2();
+            } else if (!checkpoints[2] && player.x > 2396 && player.x < 2453) {
+                openDesafioFase2();
                 checkpoints[2] = true;
-            } else if (!checkpoints[3] && player.x > 4435 && player.x < 4450) {
-                //openDesafioFase2();
+            } else if (!checkpoints[3] && player.x > 4415 && player.x < 4480) {
+                openDesafioFase2();
                 checkpoints[3] = true;
             }
             if (player.x > 4888) {
@@ -513,7 +506,7 @@
         }
 
         function resetSprite(sprite) {
-            sprite.x = game.world.bounds.left + 4681;
+            sprite.x = game.world.bounds.left + 2153;
             sprite.y = 490;
         }
 

@@ -24,9 +24,9 @@
             game.load.image('ground', '../images/fase2/platform.png');
             game.load.image('star', '../images/star.png');
             game.load.spritesheet('dude', '../images/player.png', 412.3, 454);
-            game.load.image('plat1', '../images/fase2/1.png');
-            game.load.image('plat2', '../images/fase2/2.png');
-            game.load.image('plat3', '../images/fase2/3.png');
+            game.load.image('plat1', '../images/1.png');
+            game.load.image('plat2', '../images/2.png');
+            game.load.image('plat3', '../images/3.png');
             game.load.image('plat4', '../images/fase2/4.png');
             game.load.image('plat5', '../images/fase2/5.png');
             game.load.image('plat6', '../images/fase2/6.png');
@@ -74,55 +74,6 @@
             _texto_pontuacao = game.add.text(32, 32, "Pontuação: " + _pontos);
             _texto_pontuacao.fixedToCamera = true;
 
-            //Início Plataforma 2
-            //Linha 1
-
-            ledge = platforms.create(350, 450, 'plat1');
-            ledge.scale.setTo(0.3, 0.3);
-            ledge.body.immovable = true;
-
-            for (i = 0; i < 4; i++) {
-                ledge = platforms.create(385 + i * 35, 450, 'plat2');
-                ledge.scale.setTo(0.3, 0.3);
-                ledge.body.immovable = true;
-            }
-
-            ledge = platforms.create(525, 450, 'plat3');
-            ledge.scale.setTo(0.3, 0.3);
-            ledge.body.immovable = true;
-
-            //Linha 2
-            ledge = platforms.create(350, 485, 'plat4');
-            ledge.scale.setTo(0.3, 0.3);
-            ledge.body.immovable = true;
-
-            for (i = 0; i < 4; i++) {
-                ledge = platforms.create(385 + i * 35, 485, 'plat5');
-                ledge.scale.setTo(0.3, 0.3);
-                ledge.body.immovable = true;
-            }
-
-            ledge = platforms.create(525, 485, 'plat6');
-            ledge.scale.setTo(0.3, 0.3);
-            ledge.body.immovable = true;
-
-            //Linha 3
-            ledge = platforms.create(350, 520, 'plat4');
-            ledge.scale.setTo(0.3, 0.3);
-            ledge.body.immovable = true;
-
-            for (i = 0; i < 4; i++) {
-                ledge = platforms.create(385 + i * 35, 520, 'plat5');
-                ledge.scale.setTo(0.3, 0.3);
-                ledge.body.immovable = true;
-            }
-
-            ledge = platforms.create(525, 520, 'plat6');
-            ledge.scale.setTo(0.3, 0.3);
-            ledge.body.immovable = true;
-            //Fim Plataforma 2
-
-
             //Início Plataforma 3
             //Início Coluna 1
             ledge = platforms.create(1650, 350, 'plat12');
@@ -157,21 +108,21 @@
 
             //Início Coluna 3
 
-            for (i = 0; i < 5; i++) {
+            for (i = 0; i < 6; i++) {
                 ledge = platforms.create(2150 + i * 128, 400, 'plat5');
                 ledge.body.immovable = true;
             }
-            for (i = 0; i < 5; i++) {
+            for (i = 0; i < 8; i++) {
                 ledge = platforms.create(2150 + i * 128, 300, 'plat5');
                 ledge.body.immovable = true;
             }
 
-            for (i = 0; i < 5; i++) {
+            for (i = 0; i < 8; i++) {
                 ledge = platforms.create(2150 + i * 128, 200, 'plat5');
                 ledge.body.immovable = true;
             }
 
-            for (i = 0; i < 5; i++) {
+            for (i = 0; i < 8; i++) {
                 ledge = platforms.create(2150 + i * 128, 100, 'plat5');
                 ledge.body.immovable = true;
             }
@@ -188,11 +139,11 @@
 
             //Início Piso
             //Início Piso 1
-            for (i = 0; i < 4; i++) {
-                ground = platforms.create(i * 128, game.world.height - 64, 'plat2');
+            for (i = 0; i < 7; i++) {
+                ground = platforms.create(i * 128, game.world.height - 50, 'plat2');
                 ground.body.immovable = true;
             }
-            ground = platforms.create(i * 128, game.world.height - 64, 'plat3');
+            ground = platforms.create(i * 128, game.world.height - 50, 'plat3');
             ground.body.immovable = true;
             //Fim Piso 1
 
@@ -210,7 +161,7 @@
 
             game.camera.follow(player, Phaser.Camera.FOLLOW_LOCKON, 0.1, 0);
 
-            game.world.setBounds(0, 0, 5000, 1000);
+            game.world.setBounds(0, 0, 990, 1000);
         }
 
         function update() {
