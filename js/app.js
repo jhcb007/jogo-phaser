@@ -80,6 +80,7 @@ function popularModal() {
     var html = '';
     $("#desafioPalavra").val(desafio.palavra);
     $("#labelImagem").attr('src', '../images/desavio/' + desafio.imagem);
+    html += '<label>Selecione o que você vê na imagem</label><br>';
     $.each(desafio.alternativas, function (key, value) {
         html += '<label class="custom-control custom-radio">';
         html += '<input id="radio' + key + '" name="resposta" value="' + value + '" type="radio" class="custom-control-input">';
